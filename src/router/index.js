@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import DataBindingVue from '@/views/DataBinding.vue';
+import ParentComponentVue from '@/views/ParentComponent.vue';
+import CompositionAPI1Vue from '@/views/CompositionAPI1.vue';
 
 const routes = [
 	{
@@ -21,6 +23,16 @@ const routes = [
 		path: '/DataBinding',
 		name: 'databinding',
 		component: DataBindingVue,
+	},
+	{
+		path: '/Parentcomponent',
+		name: 'parentcomponent',
+		component: ParentComponentVue,
+	},
+	{
+		path: '/CompositionAPI1',
+		name: 'compositionAPI1',
+		component: CompositionAPI1Vue,
 	},
 ];
 

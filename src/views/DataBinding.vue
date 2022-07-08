@@ -161,12 +161,12 @@ export default {
 		changeboard(flag) {
 			const board = document.getElementById('firstboard');
 			const filterboard = document.getElementById('filteringboard');
-			if (flag >= 3 || flag == '3') {
-				filterboard.style.display = 'none';
-				board.style.display = 'block';
-			} else {
+			if (flag) {
 				filterboard.style.display = 'block';
 				board.style.display = 'none';
+			} else {
+				filterboard.style.display = 'none';
+				board.style.display = 'block';
 			}
 		},
 
@@ -176,8 +176,8 @@ export default {
 			for (let i in this.filter) {
 				if (this.filter[i] == 'all') cnt++;
 			}
-			if (cnt >= this.filter.length) {
-				this.changeboard(3);
+			if (cnt === this.filter.length) {
+				this.changeboard(true);
 			} else {
 				for (let i in this.filter) {
 					if (this.filter[i] === 'all') continue;
@@ -197,16 +197,12 @@ export default {
 					filter = this.filterboard.filter(
 						boardfilter => boardfilter.class == this.filter[0],
 					);
-					console.log('작동하고갑니다 1번~');
-					console.log(filter);
 					this.filterboard = filter;
 					break;
 				case '1':
 					filter = this.filterboard.filter(
 						boardfilter => boardfilter.writer == this.filter[1],
 					);
-					console.log('작동하고갑니다 2번~');
-					console.log(filter);
 					this.filterboard = filter;
 					break;
 			}

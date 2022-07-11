@@ -5,7 +5,8 @@
 			<router-link to="/about">About</router-link> |
 			<router-link to="/databinding">databinding</router-link> |
 			<router-link to="/parentcomponent">parentcomponent</router-link> |
-			<router-link to="/compositionAPI1">compositionAPI1</router-link>
+			<router-link to="/compositionAPI1">compositionAPI1</router-link> |
+			<router-link to="/HelloWorld">HelloWorld</router-link>
 		</nav>
 		<router-view />
 	</div>

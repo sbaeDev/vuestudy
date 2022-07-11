@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import DataBindingVue from '@/views/DataBinding.vue';
 import ParentComponentVue from '@/views/ParentComponent.vue';
 import CompositionAPI1Vue from '@/views/CompositionAPI1.vue';
+import HelloWorld from '@/views/HelloWorld.vue';
 
 const routes = [
 	{
@@ -33,6 +34,11 @@ const routes = [
 		path: '/CompositionAPI1',
 		name: 'compositionAPI1',
 		component: CompositionAPI1Vue,
+	},
+	{
+		path: '/HelloWorld',
+		name: 'helloWorld',
+		component: HelloWorld,
 	},
 ];
 
